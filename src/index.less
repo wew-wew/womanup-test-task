@@ -1,12 +1,21 @@
+@white: #ffffff;
+@lightGrey: #f6f6f6;
+@mainText: #5c3e42;
+@lightColor: #e0d2b5;
+@mediumColor: #caad78;
+@darkColor: #9a845c;
+@uploadButtonWidth: 100%/2;
+
 body {
   display: flex;
   justify-content: center;
   font-family: sans-serif;
   height: 100%;
   padding: 0px;
-  background-color: #ffffff;
-  color: #5c3e42;
+  background-color: @white;
+  color: @mainText;
 }
+
 .mainContainer {
   display: flex;
   flex-direction: column;
@@ -14,9 +23,11 @@ body {
   flex: 1;
   margin: 0px;
 }
+
 .headerText {
   font-size: 32px;
 }
+
 .item {
   display: flex;
   flex-direction: column;
@@ -24,64 +35,55 @@ body {
   margin-bottom: 0px;
   padding: 10px;
   border-radius: 10px;
-  background-color: #e0d2b5;
+  background-color:@lightColor;
 }
+
 .addTaskButton {
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
-  margin-bottom: 0px;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #e0d2b5;
+  .item;
   margin-top: 0px;
 }
+
 .addTaskButton:hover {
-  color: #9a845c;
+  color:@darkColor;
 }
+
 .addTaskForm {
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
-  margin-bottom: 0px;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #e0d2b5;
+  .item;
   margin-top: 0px;
 }
+
 .tasksContainer {
   width: 500px;
   flex: 1;
   margin: 0px;
 }
+
 .taskItem {
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
-  margin-bottom: 0px;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #e0d2b5;
+  .item;
   margin-top: 10px;
 }
+
 .button {
   flex: 1;
   text-align: center;
   font-size: 16px;
   border-radius: 10px;
   border-width: 0px;
-  background-color: #5c3e42;
-  color: #f6f6f6;
+  background-color: @mainText;
+  color: @lightGrey;
   margin-left: 10px;
   margin-top: 10px;
   padding: 5px;
 }
+
 .button:first-child {
   margin-left: 0px;
 }
+
 .button:hover {
-  background-color: #9a845c;
+  background-color: @darkColor;
 }
+
 .taskHeader {
   display: flex;
   flex-direction: row;
@@ -92,78 +94,88 @@ body {
   height: 30px;
   font-size: 18px;
 }
+
 .taskDescriptionItem {
   margin-top: 10px;
   white-space: pre;
 }
+
 .formInput {
   padding: 4px;
   border-radius: 5px;
   border-width: 0px;
   font-size: 14px;
 }
+
 .alignItemsCenter {
   display: flex;
   align-items: center;
 }
+
 .marginRight5 {
   margin-right: 5px;
 }
+
 .icon {
-  color: #5c3e42;
+  color: @mainText;
 }
+
 .icon:hover {
-  color: #9a845c;
+  color: @darkColor;
 }
+
 .completeIcon {
-  color: seagreen;
-  margin-right: 5px;
+  color:seagreen;
+  .marginRight5;
 }
+
 .dateField {
-  margin-right: 5px;
+  .marginRight5;
   width: 60px;
   text-align: center;
 }
+
 .dateExpired {
-  color: crimson;
+  color:crimson;
 }
+
 .alignRight {
   align-self: flex-end;
 }
+
 .completeIcon:hover {
-  color: mediumseagreen;
+  color:mediumseagreen;
 }
+
 .expandCollapseIcon {
   align-self: center;
 }
+
 .flexRowCenter {
   display: flex;
   flex-direction: row;
   align-items: center;
   align-self: center;
 }
+
 .flexRowSpaceBetween {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 .newTaskFormHeader {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  vertical-align: middle;
-  font-weight: bold;
-  height: 30px;
-  font-size: 18px;
+  .taskHeader;
   font-weight: 500;
   font-size: 14px;
   height: auto;
 }
+
 .file {
   display: flex;
   align-items: center;
 }
+
 .file:hover {
-  cursor: pointer;
+  cursor:pointer;
 }
